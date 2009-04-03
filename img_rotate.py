@@ -23,7 +23,7 @@ ORIENTATIONS = {
 def fix_orientation(img, save_over=False):
     """
     `img` can be an Image instance or a path to an image file.
-    `save_over` indicates if the origina image file should be replaced by the new image.
+    `save_over` indicates if the original image file should be replaced by the new image.
     * Note: `save_over` is only valid if `img` is a file path.
     """
     path = None

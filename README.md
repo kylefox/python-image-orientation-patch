@@ -6,7 +6,7 @@ To add to the weirdness, if you re-downloaded the image and opened it in Photosh
 
 To be honest, I'm not sure what exactly causes this.  There's a piece of EXIF data, "Image Orientation" that somehow gets set, and somehow causes PIL to show the image incorrectly (or perhaps correctly, depending on your view).
 
-This patch simply looks at the EXIF data and re-rotates it to undo the "Image Orientation" tag.  *It doesn't modify the EXIF data*.  In fact, some quick test reveal that most EXIF data will be lost once running this script (which is not a concern of mine at the moment).
+This patch simply looks at the EXIF data and re-rotates it to undo the "Image Orientation" tag.  *It doesn't modify the EXIF data*.  In fact, some quick tests reveal most EXIF data will be lost once running the script (which is not a concern of mine at the moment).
 
 Command-line Use
 ================
