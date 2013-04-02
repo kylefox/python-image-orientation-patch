@@ -1,4 +1,4 @@
-import Image, ImageFile
+from PIL import Image, ImageFile
 
 # PIL's Error "Suspension not allowed here" work around:
 # s. http://mail.python.org/pipermail/image-sig/1999-August/000816.html
