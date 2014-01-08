@@ -1,5 +1,7 @@
 from PIL import Image, ImageFile
 
+__all__ = ['fix_orientation']
+
 # PIL's Error "Suspension not allowed here" work around:
 # s. http://mail.python.org/pipermail/image-sig/1999-August/000816.html
 ImageFile.MAXBLOCK = 1024*1024
@@ -50,12 +52,3 @@ def fix_orientation(img, save_over=False):
         return (img, degrees)
     else:
         return (img, 0)
-
-if __name__ == "__main__":
-    import sys
-    path = sys.argv[1]
-    try:
-        image, degrees = fix_orientation(path, save_over=True)
-        print '%s was rotated %s degrees.' % (path, degrees)
-    except Exception, e:
-        print "** Error: %s" % e
