@@ -8,6 +8,13 @@ To be honest, I'm not sure what exactly causes this.  There's a piece of EXIF da
 
 This patch simply looks at the EXIF data and re-rotates it to undo the "Image Orientation" tag.  *It doesn't modify the EXIF data*.  In fact, some quick tests reveal most EXIF data will be lost once running the script (which is not a concern of mine at the moment).
 
+Installing
+==========
+
+`img_rotate` is available on [PyPI](https://pypi.python.org/pypi/img_rotate/0.1) and can be installed with [pip](http://www.pip-installer.org/):
+
+    pip install img_rotate
+
 Command-line Use
 ================
 The simplest way to use this script is from the command line, passing in the filename of the image to fix:
