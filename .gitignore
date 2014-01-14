@@ -1,0 +1,5 @@
+/build
+/dist
+/img_rotate.egg-info
+*.pyc
+*.egg
