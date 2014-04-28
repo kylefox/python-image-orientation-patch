@@ -36,7 +36,7 @@ def fix_orientation(img, save_over=False):
         raise ValueError("You can't use `save_over` when passing an Image instance.  Use a file path instead.")
     try:
         orientation = img._getexif()[EXIF_ORIENTATION_TAG]
-    except (TypeError, AttributeError):
+    except (TypeError, AttributeError, KeyError):
         raise ValueError("Image file has no EXIF data.")
     if orientation in [3,6,8]:
         degrees = ORIENTATIONS[orientation][1]
