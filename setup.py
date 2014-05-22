@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='img_rotate',
-    version='0.1',
+    version='0.1.1',
     description="""Rotates PIL Image instances after EXIF-tagged image orientation""",
     url="https://github.com/kylefox/python-image-orientation-patch",
     author="Kyle Fox",
