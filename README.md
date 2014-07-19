@@ -11,7 +11,7 @@ This patch simply looks at the EXIF data and re-rotates it to undo the "Image Or
 Installing
 ==========
 
-`img_rotate` is available on [PyPI](https://pypi.python.org/pypi/img_rotate/0.1) and can be installed with [pip](http://www.pip-installer.org/):
+`img_rotate` is available on [PyPI](https://pypi.python.org/pypi/img_rotate) and can be installed with [pip](http://www.pip-installer.org/):
 
     pip install img_rotate
 
