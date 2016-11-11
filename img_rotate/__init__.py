@@ -14,12 +14,12 @@ EXIF_ORIENTATION_TAG = 274
 ORIENTATIONS = {
     1: ("Normal", 0),
     2: ("Mirrored left-to-right", 0),
-    3: ("Rotated 180 degrees", 180),
+    3: ("Rotated 180 degrees", Image.ROTATE_180),
     4: ("Mirrored top-to-bottom", 0),
     5: ("Mirrored along top-left diagonal", 0),
-    6: ("Rotated 90 degrees", -90),
+    6: ("Rotated 90 degrees", Image.ROTATE_270),
     7: ("Mirrored along top-right diagonal", 0),
-    8: ("Rotated 270 degrees", -270)
+    8: ("Rotated 270 degrees", Image.ROTATE_90)
 }
 
 def fix_orientation(img, save_over=False):
@@ -40,7 +40,7 @@ def fix_orientation(img, save_over=False):
         raise ValueError("Image file has no EXIF data.")
     if orientation in [3,6,8]:
         degrees = ORIENTATIONS[orientation][1]
-        img = img.rotate(degrees)
+        img = img.transpose(degrees)
         if save_over and path is not None:
             try:
                 img.save(path, quality=95, optimize=1)
